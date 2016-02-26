@@ -1,6 +1,7 @@
 package tiscon1.form;
 
 import lombok.Data;
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.Size;
@@ -17,6 +18,7 @@ public class AccountRegisterForm implements Serializable {
 
 
     @NotEmpty
+    @Email
     private String email;
 
     @Size(min = 6)

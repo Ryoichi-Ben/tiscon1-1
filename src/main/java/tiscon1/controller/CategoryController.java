@@ -27,6 +27,7 @@ public class CategoryController {
         model.addAttribute("genreName", genreRepository.getGenreName(genreId));
         model.addAttribute("subgenreName", genreRepository.getSubGenreName(genreId, subgenreId));
 
+
         try {
             model.addAttribute("ranking", categoryRepository.findTop10(genreId, subgenreId));
         } catch (Exception e) {

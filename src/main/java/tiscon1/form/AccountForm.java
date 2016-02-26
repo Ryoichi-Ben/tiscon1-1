@@ -3,7 +3,7 @@ package tiscon1.form;
 import lombok.Data;
 import org.hibernate.validator.constraints.NotEmpty;
 import tiscon1.model.Prefecture;
-
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
@@ -34,6 +34,7 @@ public class AccountForm implements Serializable {
     private String company;
 
     @Size(min = 1, max = 100)
+    @Pattern(regexp="[0-9]")
     private String telephoneNumber;
 
     private String prefectureCd;
